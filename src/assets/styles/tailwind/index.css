@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    body {
+        @apply text-dark-500 dark:text-dark-400 text-sm bg-dark-100 dark:bg-dark-900 leading-normal;
+        -webkit-font-smoothing: antialiased;
+    }
+
+    h1,
+    .h1 {
+        @apply text-4xl font-bold text-dark-900 dark:text-dark-100;
+    }
+
+    h2,
+    .h2 {
+        @apply text-3xl font-bold text-dark-900 dark:text-dark-100;
+    }
+
+    h3,
+    .h3 {
+        @apply text-2xl font-semibold text-dark-900 dark:text-dark-100;
+    }
+
+    h4,
+    .h4 {
+        @apply text-xl font-semibold text-dark-900 dark:text-dark-100;
+    }
+
+    h5,
+    .h5 {
+        @apply text-lg font-semibold text-dark-900 dark:text-dark-100;
+    }
+
+    h6,
+    .h6 {
+        @apply text-base font-semibold text-dark-900 dark:text-dark-100;
+    }
+
+    hr {
+        @apply border-dark-200 dark:border-dark-600;
+    }
+
+    .heading-text {
+        @apply text-dark-900 dark:text-dark-100;
+    }
+}
