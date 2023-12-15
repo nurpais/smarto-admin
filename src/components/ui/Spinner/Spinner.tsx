@@ -1,6 +1,6 @@
 import classNames from 'classnames'
 import { CgSpinner } from 'react-icons/cg'
-import { CommonProps } from '../@types/common'
+import type { CommonProps } from '@/@types/common'
 
 const Spinner = (props: CommonProps) => {
     const { className } = props

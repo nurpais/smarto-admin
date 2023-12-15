@@ -1,11 +1,15 @@
+import Header from '@/components/template/Header'
 import Sidebar from '@/components/template/Sidebar'
 import Views from '@/views'
 
 function DefaultLayout() {
     return (
-        <div className="flex gap-10">
+        <div className="flex flex-auto">
             <Sidebar />
-            <Views />
+            <div className="flex flex-col min-h-screen flex-auto w-full">
+                <Header />
+                <Views />
+            </div>
         </div>
     )
 }

@@ -7,7 +7,11 @@ interface SidebarSingleItemProps {
 
 function SidebarSingleItem({ item }: SidebarSingleItemProps) {
     return (
-        <Link to={item.path} target={item.isExternalLink ? '_blank' : ''}>
+        <Link
+            to={item.path}
+            target={item.isExternalLink ? '_blank' : ''}
+            className="block"
+        >
             {item.title}
         </Link>
     )

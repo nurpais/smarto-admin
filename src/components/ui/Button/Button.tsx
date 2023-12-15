@@ -1,6 +1,6 @@
 import { forwardRef } from 'react'
 import classNames from 'classnames'
-import type { CommonProps } from '../@types/common'
+import type { CommonProps } from '@/@types/common'
 import type { ComponentPropsWithRef, MouseEvent, ReactNode } from 'react'
 
 import Spinner from '../Spinner/Spinner'

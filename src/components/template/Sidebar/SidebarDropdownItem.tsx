@@ -6,7 +6,6 @@ interface SidebarDropdownItemProps {
 }
 
 function SidebarDropdownItem({ items }: SidebarDropdownItemProps) {
-    console.log(items)
     return (
         <div>
             {items.map((item) => (

@@ -6,6 +6,9 @@ const uiComponentsRoute: Routes = [
         key: 'uiComponents.button',
         path: 'ui-components/button',
         component: lazy(() => import('@/views/ui-components/Button')),
+        meta: {
+            // footer: false,
+        },
     },
 ]
 

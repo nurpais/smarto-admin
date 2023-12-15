@@ -5,6 +5,8 @@ import PublicRoute from '@/components/route/PublicRoute'
 
 import { protectedRoutes, publicRoutes } from '@/routes'
 import { Routes, Route, Navigate } from 'react-router-dom'
+import { Suspense } from 'react'
+import PageContainer from '@/components/template/PageContainer'
 
 const { authenticatedEntryPath } = appConfig
 
@@ -20,7 +22,11 @@ const AllRoutes = () => {
                     <Route
                         key={route.key}
                         path={route.path}
-                        Component={route.component}
+                        element={
+                            <PageContainer {...route.meta}>
+                                {<route.component />}
+                            </PageContainer>
+                        }
                     />
                 ))}
                 <Route path="*" element={<Navigate replace to="/" />} />
@@ -41,9 +47,9 @@ const AllRoutes = () => {
 
 function Views() {
     return (
-        <div>
+        <Suspense fallback={<div>LOADING...</div>}>
             <AllRoutes />
-        </div>
+        </Suspense>
     )
 }
 

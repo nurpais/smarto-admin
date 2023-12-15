@@ -1,10 +1,8 @@
 import { ComponentPropsWithRef, forwardRef } from 'react'
-import { CommonProps } from '../@types/common'
+import type { CommonProps } from '@/@types/common'
 import classNames from 'classnames'
 
-interface CardProps
-    extends CommonProps,
-        Omit<ComponentPropsWithRef<'div'>, 'onClick'> {
+interface CardProps extends CommonProps, ComponentPropsWithRef<'div'> {
     shape?: 'round' | 'none'
 }
 

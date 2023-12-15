@@ -1,4 +1,4 @@
-import { useState, lazy, Suspense } from 'react'
+import { useState, lazy, Suspense, useMemo } from 'react'
 
 const DefaultLayout = lazy(() => import('./DefaultLayout'))
 const AuthLayout = lazy(() => import('./AuthLayout'))
@@ -6,12 +6,12 @@ const AuthLayout = lazy(() => import('./AuthLayout'))
 function Layouts() {
     const [authenticated] = useState(true)
 
-    const AppLayout = () => {
+    const AppLayout = useMemo(() => {
         if (authenticated) {
-            return <DefaultLayout />
+            return DefaultLayout
         }
-        return <AuthLayout />
-    }
+        return AuthLayout
+    }, [authenticated])
 
     return (
         <Suspense fallback={<div>Loading...</div>}>

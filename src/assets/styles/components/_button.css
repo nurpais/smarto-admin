@@ -27,6 +27,7 @@
         @apply text-base py-2.5 px-4 h-10;
     }
 
+    /* Button icon */
     &.button-sm.button-icon {
         @apply w-8 h-8 p-1;
     }

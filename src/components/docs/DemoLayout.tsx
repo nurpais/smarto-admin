@@ -15,7 +15,7 @@ function DemoLayout(props: DemoLayoutProps) {
 
     return (
         <div>
-            <h2 className="mb-10">{title}</h2>
+            <h2 className="mb-8">{title}</h2>
 
             <div className="space-y-8">
                 {demos.map((demo) => (
